@@ -1,8 +1,8 @@
-#Descripción.
+Descripción. <br>
 La prueba consiste en construir una aplicación que consuma una API a tu elección. Luego
 debes grabar un video explicando cada uno de los requerimientos.
 
-#Instrucciones.
+Instrucciones. <br>
 ● El video lo debes subir a youtube o vimeo en modo público. Si prefieres, puedes
 marcarlo como no listado de forma que solo quienes tengan el link puedan acceder a
 él.
