@@ -1,7 +1,11 @@
+import { useContext } from "react"
+import { DataContext } from "../context/DataContext"
+
 function MiApi() {
-  return (
-    <div> <h1 className="text-3xl font-bold underline">Hello world!</h1></div>
-  )
+  const { data } = useContext(DataContext)
+  const { setData } = useContext(DataContext)
+
+  return <div></div>
 }
 
 export default MiApi

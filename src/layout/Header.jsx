@@ -1,7 +1,7 @@
+import Navbar from "../components/Navbar"
+
 function Header() {
-  return (
-    <div>Header</div>
-  )
+  return <Navbar />
 }
 
 export default Header

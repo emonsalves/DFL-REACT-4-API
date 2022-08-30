@@ -3,21 +3,32 @@ export const DataContext = createContext()
 import { db } from "../data/db"
 
 const DataProvider = ({ children }) => {
-  const [data, setData] = useState(db)
-  const [texto, setTexto] = useState("hola")
+  const [data, setData] = useState("")
+  const [characters, setCharacters] = useState([])
+  const initialUrl = "https://rickandmortyapi.com/api/character"
+  const [brand, setBrand] = useState("Rick and Morty")
 
-  const keyPrivada = "7041d30d6fb320dc56ed4bad7945a9c7f4881abb"
-  const keyPublica = "a94d34e270e5dd65ae177755ec5b879a"
-  const ts = 1
-  const md5 = "(ts+privateKey+publicKey)"
-  hash = "938c843bdb78560535c72666a17f5150"
+  const fetchCharacters = (initialUrl) => {
+    fetch(initialUrl)
+      .then((response) => response.json())
+      .then((data) => setCharacters(data.results))
+      .catch((error) => console.log(error))
+  }
 
   useEffect(() => {
-    setData(data)
+    fetchCharacters(initialUrl)
+
+    return () => {
+      setData(data)
+    }
   }, [])
 
+    // useEffect(() => {
+    //   setData(data)
+    // }, [])
+
   return (
-    <DataContext.Provider value={{ db, texto, setTexto }}>
+    <DataContext.Provider value={{ db, brand }}>
       {children}
     </DataContext.Provider>
   )
