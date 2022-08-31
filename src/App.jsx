@@ -1,15 +1,14 @@
-import "./App.css"
-// import Form from "./components/Form"
-import MiApi from "./components/MiApi"
 import DataProvider from "./context/DataContext"
 import Header from "./layout/Header"
+import Footer from "./layout/Footer"
+import Container from "./components/Container"
 
 function App() {
   return (
     <DataProvider>
-      {/* <Form /> */}
-      {/* <MiApi /> */}
       <Header />
+      <Container />
+      <Footer />
     </DataProvider>
   )
 }

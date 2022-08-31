@@ -1,9 +1,7 @@
 import { createContext, useState, useEffect } from "react"
 export const DataContext = createContext()
-import { db } from "../data/db"
 
 const DataProvider = ({ children }) => {
-  const [data, setData] = useState("")
   const [characters, setCharacters] = useState([])
   const initialUrl = "https://rickandmortyapi.com/api/character"
   const [brand, setBrand] = useState("Rick and Morty")
@@ -17,18 +15,10 @@ const DataProvider = ({ children }) => {
 
   useEffect(() => {
     fetchCharacters(initialUrl)
-
-    return () => {
-      setData(data)
-    }
   }, [])
 
-    // useEffect(() => {
-    //   setData(data)
-    // }, [])
-
   return (
-    <DataContext.Provider value={{ db, brand }}>
+    <DataContext.Provider value={{ brand, characters }}>
       {children}
     </DataContext.Provider>
   )
