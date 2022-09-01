@@ -16,30 +16,37 @@ function Header() {
 
   return (
     <div className="box-border">
-      <nav className="bg-white px-2 sm:px-4 py-2.5 dark:bg-gray-900 fixed w-full z-20 top-0 left-0 border-b border-gray-200 dark:border-gray-600">
-        <div className="container flex flex-wrap items-center 
-        justify-center md:justify-around">
+      <nav
+        className="fixed w-full z-20 top-0 left-0 mb-1"
+        style={{
+          backgroundImage: `url("https://images.alphacoders.com/876/876589.jpg")`,
+        }}
+      >
+        <div
+          className="container flex flex-wrap 
+        justify-evenly md:justify-around 2xl:min-w-full"
+        >
           <div className="flex items-center">
             <img
               src="/src/assets/logo.png"
               alt="logo rick and morty"
               className="h-14 sm:h-24"
             />
-            <span className="self-center text-xl font-semibold  dark:text-white mr-6">
+            <span className="self-center text-xl font-semibold  dark:text-green-400">
               Rick and Morty
             </span>
           </div>
-          <div className="flex justify-around items-center md:order-2">
+          <div className="flex justify-around items-center md:order-2 w-full md:w-auto">
             <input
               type="text"
               placeholder="Buscador"
-              className="flex items-center rounded-lg pt-2 pb-2 w-18 "
+              className="flex items-center rounded-lg pt-2 pb-2 w-24 "
             />
             <button
               onClick={btnHidden}
               data-collapse-toggle="navbar-sticky"
               type="button"
-              className="flex justify-center items-center p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+              className="flex justify-center items-center p-2 text-sm text-green-400 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-green-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
               aria-controls="navbar-sticky"
               aria-expanded="false"
             >
@@ -60,11 +67,11 @@ function Header() {
             </button>
           </div>
           <div className={btnClassHidden} id="navbar-sticky">
-            <ul className="flex flex-col p-4 mt-4 bg-gray-50 rounded-lg border border-gray-100 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+            <ul className="flex flex-col p-4 mt-4 bg-gray-50 rounded-lg border border-green-400 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 dark:bg-black md:bg-black dark:border-green-400">
               <li>
                 <a
                   href="#"
-                  className="block py-2 pr-4 pl-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white"
+                  className="block py-2 pr-4 pl-3 text-green-400 rounded  hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-white dark:text-green-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-green-400"
                   aria-current="page"
                 >
                   Home
@@ -73,7 +80,7 @@ function Header() {
               <li>
                 <a
                   href="#"
-                  className="block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                  className="block py-2 pr-4 pl-3 text-green-400 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-white dark:text-green-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
                 >
                   About
                 </a>
@@ -81,7 +88,7 @@ function Header() {
               <li>
                 <a
                   href="#"
-                  className="block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                  className="block py-2 pr-4 pl-3 text-green-400 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-white dark:text-green-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
                 >
                   Contact
                 </a>
@@ -91,12 +98,7 @@ function Header() {
         </div>
       </nav>
       <div className="mx-auto max-w-lg">
-        <div role="status" className="my-6 animate-pulse">
-          <div className="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[460px] mb-2.5"></div>
-          <div className="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[450px] mb-2.5"></div>
-          <div className="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[450px] mb-2.5"></div>
-
-        </div>
+        <div className="mt-16 mb-20 sm:mt-16 sm:mb-8 "></div>
       </div>
     </div>
   )
