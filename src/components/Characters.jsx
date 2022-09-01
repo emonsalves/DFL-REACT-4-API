@@ -9,11 +9,11 @@ function Characters() {
   })
 
   return (
-    <div className="grid justify-items-center gap-4 mt-4 w-full justify-center sm:grid-cols-4 ms:grid-cols-6">
+    <div className="grid justify-items-center gap-4 mt-4 w-full justify-center sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6">
       {characters.map((slot, index) => (
         <div
           key={slot.id}
-          className="max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700"
+          className="max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700 hover:-translate-y-1 hover:scale-105 duration-300"
         >
           <img
             className="flex rounded-t-lg mx-auto w-full"
@@ -33,8 +33,6 @@ function Characters() {
           </div>
         </div>
       ))}
-
-      <h1>Test</h1>
     </div>
   )
 }
