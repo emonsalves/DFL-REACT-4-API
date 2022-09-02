@@ -1,10 +1,10 @@
+import background from "../assets/wallpaper.jpg"
 function Footer() {
+
   return (
     <footer
-      className="py-6 dark:bg-gray-800 dark:text-gray-50 bg-cover bg-no-repeat bg-bottom"
-      style={{
-        backgroundImage: `url("https://images.alphacoders.com/876/876589.jpg")`,
-      }}
+      className="py-6 dark:text-gray-50 bg-cover bg-no-repeat bg-fixed bg-center"
+      style={{ backgroundImage: `url(${background})` }}
     >
       <div className="container px-6 mx-auto space-y-6 divide-y divide-gray-400 md:space-y-12 divide-opacity-50">
         <div className="grid grid-cols-12">
@@ -82,6 +82,24 @@ function Footer() {
           <div className="col-span-6 text-center md:text-left md:col-span-3">
             <p className="pb-1 text-lg font-medium">Category</p>
             <ul>
+              <li>
+                <a
+                  rel="noopener noreferrer"
+                  href="#"
+                  className="hover:dark:text-violet-400"
+                >
+                  Link
+                </a>
+              </li>
+              <li>
+                <a
+                  rel="noopener noreferrer"
+                  href="#"
+                  className="hover:dark:text-violet-400"
+                >
+                  Link
+                </a>
+              </li>
               <li>
                 <a
                   rel="noopener noreferrer"

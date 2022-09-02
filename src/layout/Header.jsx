@@ -1,6 +1,6 @@
 import { useState } from "react"
-import Navbar from "../components/Navbar"
 import Input from "../components/Input"
+import background from "../assets/wallpaper.jpg"
 
 function Header() {
   const classHidden =
@@ -18,32 +18,25 @@ function Header() {
   return (
     <div className="box-border">
       <nav
-        className="fixed w-full z-20 top-0 left-0 mb-1"
-        style={{
-          backgroundImage: `url("https://images.alphacoders.com/876/876589.jpg")`,
-        }}
+        className="fixed w-full z-20 top-0 left-0 mb-1 bg-cover bg-no-repeat bg-fixed bg-center"
+        style={{ backgroundImage: `url(${background})` }}
       >
         <div
-          className="container flex flex-wrap 
+          className="container flex flex-wrap justify-center 
         md:justify-around 2xl:min-w-full"
         >
           <div className="flex justify-items-stretch">
             <img
-              src="/src/assets/logo.png"
+              src="https://i.postimg.cc/Wpqh08PC/logo.png"
               alt="logo rick and morty"
-              className="h-14 sm:h-24 flex"
+              className="h-14 mr-10 sm:h-24"
             />
             <span className="self-center text-xl font-semibold dark:text-green-400">
               Rick and Morty
             </span>
           </div>
           <div className="flex justify-around items-center md:order-2 w-full md:w-auto">
-            {/* <input
-              type="text"
-              placeholder="Buscador"
-              className="flex items-center rounded-lg pt-2 pb-2 w-24 "
-            /> */}
-            <Input btnHidden={btnHidden}/> 
+            <Input btnHidden={btnHidden} />
             <button
               onClick={btnHidden}
               data-collapse-toggle="navbar-sticky"
