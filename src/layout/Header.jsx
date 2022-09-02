@@ -1,5 +1,6 @@
 import { useState } from "react"
 import Navbar from "../components/Navbar"
+import Input from "../components/Input"
 
 function Header() {
   const classHidden =
@@ -24,24 +25,25 @@ function Header() {
       >
         <div
           className="container flex flex-wrap 
-        justify-evenly md:justify-around 2xl:min-w-full"
+        md:justify-around 2xl:min-w-full"
         >
-          <div className="flex items-center">
+          <div className="flex justify-items-stretch">
             <img
               src="/src/assets/logo.png"
               alt="logo rick and morty"
-              className="h-14 sm:h-24"
+              className="h-14 sm:h-24 flex"
             />
-            <span className="self-center text-xl font-semibold  dark:text-green-400">
+            <span className="self-center text-xl font-semibold dark:text-green-400">
               Rick and Morty
             </span>
           </div>
           <div className="flex justify-around items-center md:order-2 w-full md:w-auto">
-            <input
+            {/* <input
               type="text"
               placeholder="Buscador"
               className="flex items-center rounded-lg pt-2 pb-2 w-24 "
-            />
+            /> */}
+            <Input btnHidden={btnHidden}/> 
             <button
               onClick={btnHidden}
               data-collapse-toggle="navbar-sticky"

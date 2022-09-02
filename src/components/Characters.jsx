@@ -13,10 +13,7 @@ function Characters() {
     >
       {characters.map((slot, index) => (
         <div
-          key={slot.id}
-        //   className="max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-transparent dark:border-gray-700 hover:-translate-y-1 hover:scale-105 duration-300"
-        // >
-          
+          key={slot.id}         
           className="max-w-sm bg-white rounded-lg shadow-md dark:bg-transparent hover:-translate-y-1 hover:scale-105 duration-300"
         >
           <img
