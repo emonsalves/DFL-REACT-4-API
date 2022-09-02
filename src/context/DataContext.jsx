@@ -13,6 +13,8 @@ const DataProvider = ({ children }) => {
       .catch((error) => console.log(error))
   }
 
+  console.log(characters)
+
   useEffect(() => {
     fetchCharacters(initialUrl)
   }, [])
