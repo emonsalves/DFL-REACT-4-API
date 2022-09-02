@@ -17,3 +17,6 @@ trabajar los resultados como un array. <br>
 ● Debes subir el proyecto a github. <br>
 ● Agregar la URL del video dentro del archivo Readme.md en la raíz del proyecto. <br>
 ● Al final debes compartir en el LMS el link de acceso al repositorio. <br>
+
+working in
+link proyecto -> https://emonsalvesreactapi.netlify.app 
