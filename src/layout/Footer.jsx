@@ -1,6 +1,5 @@
 import background from "../assets/wallpaper.jpg"
 function Footer() {
-
   return (
     <footer
       className="py-6 dark:text-gray-50 bg-cover bg-no-repeat bg-fixed bg-center"

@@ -1,5 +1,5 @@
 import { useState } from "react"
-import Input from "../components/Input"
+import Input from "../components/Search"
 import background from "../assets/wallpaper.jpg"
 
 function Header() {
@@ -62,7 +62,7 @@ function Header() {
             </button>
           </div>
           <div className={btnClassHidden} id="navbar-sticky">
-            <ul className="flex flex-col p-4 mt-4 bg-gray-50 rounded-lg border border-green-400 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 dark:bg-black md:bg-black dark:border-green-400">
+            <ul className="flex flex-col p-4 mt-4 bg-gray-50 rounded-lg border border-green-400 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 dark:bg-transparent md:bg-transparent dark:border-green-400">
               <li>
                 <a
                   href="#"
@@ -77,7 +77,7 @@ function Header() {
                   href="#"
                   className="block py-2 pr-4 pl-3 text-green-400 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-white dark:text-green-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
                 >
-                  About
+                  Locations
                 </a>
               </li>
               <li>
@@ -85,7 +85,7 @@ function Header() {
                   href="#"
                   className="block py-2 pr-4 pl-3 text-green-400 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-white dark:text-green-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
                 >
-                  Contact
+                  Episodes
                 </a>
               </li>
             </ul>
