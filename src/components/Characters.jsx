@@ -22,14 +22,14 @@ function Characters() {
           />
 
           <div className="p-4 ">
-            <h5 className="bg-white backdrop-filter backdrop-blur-md bg-opacity-25 rounded-2xl mb-3 text-2xl text-center font-bold tracking-tight text-gray-900 dark:text-white">
+            <h5 className="bg-white backdrop-filter backdrop-blur-md bg-opacity-25 rounded-2xl mb-3 text-2xl text-center font-bold tracking-tight text-black">
               {slot.name}
             </h5>
 
-            <p className="bg-white backdrop-filter backdrop-blur-md bg-opacity-25 rounded-2xl mb-2 pl-2 font-normal text-gray-700 dark:text-gray-400">
+            <p className="bg-white backdrop-filter backdrop-blur-md bg-opacity-25 rounded-2xl mb-2 pl-2 font-normal text-black">
               <strong>Status :</strong> {slot.status}
             </p>
-            <p className="bg-white backdrop-filter backdrop-blur-md bg-opacity-25 rounded-2xl mb-2 pl-2 font-normal text-gray-700 dark:text-gray-400">
+            <p className="bg-white backdrop-filter backdrop-blur-md bg-opacity-25 rounded-2xl mb-2 pl-2 font-normal text-black ">
               <strong>Location :</strong> {slot.location.name}
             </p>
           </div>
