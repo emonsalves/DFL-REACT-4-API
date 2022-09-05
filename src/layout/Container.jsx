@@ -6,7 +6,7 @@ const Characters = lazy(() => import("../components/Characters"))
 function Container() {
   return (
     <div>
-      <Suspense fallback={<Loading />}>
+      <Suspense fallback={<h1>error</h1>}>
         <Filters/>
         <Characters />
       </Suspense>
