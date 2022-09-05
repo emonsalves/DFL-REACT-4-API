@@ -1,15 +1,15 @@
-import { Suspense, lazy } from "react"
-import Loading from "../components/Loading"
+import background from "../assets/wallpaper.jpg"
 import Filters from "../components/Filters"
-const Characters = lazy(() => import("../components/Characters"))
+import Cards from "../components/Cards"
 
-function Container() {
+const Container = () => {
   return (
-    <div>
-      <Suspense fallback={<h1>error</h1>}>
-        <Filters/>
-        <Characters />
-      </Suspense>
+    <div  
+      className="grid grid-cols-4 gap-2 justify-items-center bg-cover bg-fixed bg-center bg-no-repeat"
+      style={{ backgroundImage: `url(${background}) ` }}
+    >
+      <Filters className/>
+      <Cards className/>
     </div>
   )
 }
