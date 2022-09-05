@@ -2,27 +2,24 @@ import { createContext, useState, useEffect } from "react"
 export const DataContext = createContext()
 
 const DataProvider = ({ children }) => {
-  const [characters, setCharacters] = useState([])
-  const initialUrl = "https://rickandmortyapi.com/api/character"
-  const [brand, setBrand] = useState("Rick and Morty")
+  let [page, setPage] = useState(1)
+  const [data, setData] = useState([])
+  const [info, setInfo] = useState([])
+  const apiUrl = `https://rickandmortyapi.com/api/character?page=${page}`
 
-  const fetchCharacters = (initialUrl) => {
-    fetch(initialUrl)
+  const fetchCharacters = async () => {
+    await fetch(apiUrl)
       .then((response) => response.json())
-      .then((data) => setCharacters(data.results))
+      .then((data) => setData(data.results), setInfo(data.info))
       .catch((error) => console.log(error))
   }
 
-  // console.log(characters)
-
   useEffect(() => {
-    fetchCharacters(initialUrl)
-  }, [])
+    fetchCharacters(apiUrl)
+  }, [apiUrl])
 
   return (
-    <DataContext.Provider value={{ brand, characters }}>
-      {children}
-    </DataContext.Provider>
+    <DataContext.Provider value={{ data }}>{children}</DataContext.Provider>
   )
 }
 

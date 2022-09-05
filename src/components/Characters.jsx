@@ -3,17 +3,17 @@ import { DataContext } from "../context/DataContext"
 import background from "../assets/wallpaper.jpg"
 
 function Characters() {
-  const { characters } = useContext(DataContext)
+  const { data } = useContext(DataContext)
 
   return (
     <div
       className="grid justify-items-center bg-cover bg-fixed bg-center bg-no-repeat gap-6 pt-10 w-full justify-center sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6"
       style={{ backgroundImage: `url(${background})` }}
     >
-      {characters.map((slot, index) => (
+      {data.map((slot, index) => (
         <div
           key={slot.id}
-          className="max-w-sm bg-white rounded-lg shadow-md dark:bg-transparent hover:-translate-y-1 hover:scale-105 duration-300"
+          className="max-w-sm rounded-lg shadow-md dark:bg-transparent hover:-translate-y-1 hover:scale-105 duration-300"
         >
           <img
             className="flex rounded-full mx-auto w-full"
