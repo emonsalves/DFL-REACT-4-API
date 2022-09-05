@@ -1,6 +1,7 @@
 import { Suspense, lazy } from "react"
 import DataProvider from "./context/DataContext"
 import Loading from "./components/Loading"
+const Pagination = lazy(()=> import("./components/Pagination"))
 const Header = lazy(() => import("./layout/Header"))
 const Footer = lazy(() => import("./layout/Footer"))
 const Container = lazy(() => import("./layout/Container"))
@@ -11,6 +12,7 @@ function App() {
       <Suspense fallback={<Loading />}>
         <Header />
         <Container />
+        <Pagination/>
         <Footer />
       </Suspense>
     </DataProvider>

@@ -36,7 +36,7 @@ function Header() {
             </span>
           </div>
           <div className="flex justify-around items-center md:order-2 w-full md:w-auto">
-            <Input btnHidden={btnHidden} />
+            <Input />
             <button
               onClick={btnHidden}
               data-collapse-toggle="navbar-sticky"
