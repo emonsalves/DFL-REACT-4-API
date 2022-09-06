@@ -18,5 +18,12 @@ trabajar los resultados como un array. <br>
 ● Agregar la URL del video dentro del archivo Readme.md en la raíz del proyecto. <br>
 ● Al final debes compartir en el LMS el link de acceso al repositorio. <br>
 
+Tecnologias usadas : 
+react vite tailwind lazy load react routes 
+
+Api:
+API Rick and Morty
+https://rickandmortyapi.com
+
 working in
 link proyecto -> https://emonsalvesreactapi.netlify.app 
