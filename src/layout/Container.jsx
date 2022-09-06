@@ -5,7 +5,7 @@ import Cards from "../components/Cards"
 const Container = () => {
   return (
     <div  
-      className="grid grid-cols-4 gap-2 justify-items-center bg-cover bg-fixed bg-center bg-no-repeat"
+      className="grid grid-cols-7 bg-cover bg-fixed bg-center bg-no-repeat"
       style={{ backgroundImage: `url(${background}) ` }}
     >
       <Filters className/>

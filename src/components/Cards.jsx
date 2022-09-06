@@ -5,7 +5,7 @@ function Cards() {
   const { data } = useContext(DataContext)
 
   return (
-    <div className="flex flex-wrap col-span-3 justify-items-center bg-cover bg-fixed bg-center bg-no-repeat gap-6 pt-10 w-full justify-center">
+    <div className="flex flex-wrap col-span-6 justify-items-center bg-cover bg-fixed bg-center bg-no-repeat gap-6 pt-10 w-full justify-center">
       {data.results ? (
         data.results.map((slot) => (
           <div
