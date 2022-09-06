@@ -1,21 +1,34 @@
+import { useContext } from "react"
+import { DataContext } from "../context/DataContext"
+
 function FiltersBtn({ name, index, items }) {
+  const { setStatus, setPageNumber, setGender, setSpecies } = useContext(DataContext)
+
+  const btnClick = () => {
+    setPageNumber(1)
+    name === "status" ? setStatus(items) : null
+    name === "gender" ? setGender(items) : null
+    name === "species" ? setSpecies(items) : null
+  }
+
   return (
     <>
       <li>
         <input
-          type="checkbox"
+          onClick={btnClick}
+          type="radio"
           id={`${name}-${index}`}
-          value=""
-          className="hidden peer "
           name={name}
+          value="hosting-small"
+          className="hidden peer"
           required=""
         />
         <label
           htmlFor={`${name}-${index}`}
-          className="flex justify-center p-2 bg-white rounded-lg border-2 border-gray-200 cursor-pointer dark:hover:text-gray-300 dark:border-gray-900 peer-checked:bg-green-400 peer-checked:border-green-400 hover:text-gray-600 dark:peer-checked:text-white peer-checked:text-white hover:bg-green-50 dark:text-gray-400 dark:bg-green-800 dark:hover:bg-green-800"
+          className="flex justify-around items-center p-1 w-full text-gray-500 bg-white rounded-lg border border-gray-200 cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700"
         >
-          <div className="">
-            <div className="text-lg text-center font-semibold">{items}</div>
+          <div className="block">
+            <div className="w-full text-lg font-semibold">{items}</div>
           </div>
         </label>
       </li>

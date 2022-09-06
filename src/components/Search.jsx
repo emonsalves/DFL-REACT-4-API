@@ -3,10 +3,10 @@ import { DataContext } from "../context/DataContext"
 
 function Input() {
   
-  const { setPage, search, setSearch } = useContext(DataContext)
+  const { setPageNumber, search, setSearch } = useContext(DataContext)
 
   const keyPress = (e) => {
-    setPage(1)
+    setPageNumber(1)
     setSearch(e.target.value)
   }
 

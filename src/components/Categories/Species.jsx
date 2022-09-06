@@ -12,7 +12,6 @@ function Species() {
     "Disease",
     "Robot",
     "Cronenberg",
-    "Planet",
   ]
   return (
     <details className="w-full border border-slate-500 cursor-pointer mb-3">
@@ -20,7 +19,7 @@ function Species() {
         Specie
       </summary>
       {species.map((items, index) => (
-        <FiltersBtn key={index} name="status" index={index} items={items} />
+        <FiltersBtn key={index} name="species" index={index} items={items} />
       ))}
     </details>
   )

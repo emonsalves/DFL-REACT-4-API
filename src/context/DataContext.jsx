@@ -2,11 +2,17 @@ import { createContext, useState, useEffect } from "react"
 export const DataContext = createContext()
 
 const DataProvider = ({ children }) => {
-  const [info, setInfo] = useState("")
-  let [page, setPage] = useState(1)
+
+  let [pageNumber, setPageNumber] = useState(1)
   const [search, setSearch] = useState("")
+  const [status, setStatus] = useState("")
+  const [gender, setGender] = useState("")
+  const [species, setSpecies] = useState("")
+
+
+  const [info, setInfo] = useState("")
   const [data, setData] = useState([])
-  const apiUrl = `https://rickandmortyapi.com/api/character?page=${page}&name=${search}`
+  const apiUrl = `https://rickandmortyapi.com/api/character?page=${pageNumber}&name=${search}&status=${status}&gender=${gender}&species=${species}`
 
   const fetchData = async () => {
     await fetch(apiUrl)
@@ -31,7 +37,7 @@ const DataProvider = ({ children }) => {
 
   return (
     <DataContext.Provider
-      value={{ data, page, setPage, info, search, setSearch }}
+      value={{ data, pageNumber, setPageNumber, info, search, setSearch, setStatus, setGender, setSpecies }}
     >
       {children}
     </DataContext.Provider>

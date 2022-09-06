@@ -3,13 +3,13 @@ import { DataContext } from "../context/DataContext"
 import background from "../assets/wallpaper.jpg"
 
 function Pagination() {
-  const { page, setPage, info } = useContext(DataContext)
+  const { pageNumber, setPageNumber, info } = useContext(DataContext)
 
   let prev = () => {
-    page > 0 ? setPage(page - 1) : null
+    pageNumber > 0 ? setPageNumber(pageNumber - 1) : null
   }
   let next = () => {
-    page < info.pages ? setPage(page + 1) : null
+    pageNumber < info.pages ? setPageNumber(pageNumber + 1) : null
   }
 
   return (

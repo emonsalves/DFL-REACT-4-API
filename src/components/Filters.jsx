@@ -1,15 +1,18 @@
-import { useState } from "react"
-import Grender from "./Categories/Grender"
+import { useContext } from "react"
+import { DataContext } from "../context/DataContext"
+import Gender from "./Categories/Gender"
 import Species from "./Categories/Species"
 import Status from "./Categories/Status"
 import styles from "./Filters.css"
 const Filters = () => {
-  const [statusActive, setStatusActive] = useState("hidden")
-  const [speciesActive, setSpeciesActive] = useState("hidden")
-  const [genderActive, setGenderActive] = useState("hidden")
+  const { setPageNumber, setGender, setStatus, setSpecies } =
+    useContext(DataContext)
 
-  const clickHidden = (e) => {
-    setStatusActive(e.target.s)
+  const clearFilters = () => {
+    setPageNumber(1)
+    setGender("")
+    setSpecies("")
+    setStatus("")
   }
 
   return (
@@ -20,12 +23,13 @@ const Filters = () => {
           <h1
             className="text-l mb-5 text-center text-red-500 underline"
             style={{ cursor: "pointer" }}
+            onClick={clearFilters}
           >
             Clear Filters
           </h1>
           <Species />
           <Status />
-          <Grender />
+          <Gender />
         </div>
       </div>
     </>
