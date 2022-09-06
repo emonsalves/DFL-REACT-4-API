@@ -1,4 +1,4 @@
-import FiltersBtn from "../FiltersBtn"
+import FiltersBtn from "../Filters/FiltersBtn"
 
 function Species() {
   const species = [

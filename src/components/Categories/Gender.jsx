@@ -1,4 +1,4 @@
-import FiltersBtn from "../FiltersBtn"
+import FiltersBtn from "../Filters/FiltersBtn"
 function Grender() {
   const gender = ["Female", "Male", "Genderless", "Unknown"]
   return (

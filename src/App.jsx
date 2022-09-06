@@ -1,6 +1,6 @@
 import { Suspense, lazy } from "react"
 import DataProvider from "./context/DataContext"
-import Loading from "./components/Loading"
+import Loading from "./components/Loading/Loading"
 const Pagination = lazy(()=> import("./components/Pagination"))
 const Header = lazy(() => import("./layout/Header"))
 const Footer = lazy(() => import("./layout/Footer"))

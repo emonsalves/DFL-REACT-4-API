@@ -1,5 +1,5 @@
 import background from "../assets/wallpaper.jpg"
-import Filters from "../components/Filters"
+import Filters from "../components/Filters/Filters"
 import Cards from "../components/Cards"
 
 const Container = () => {

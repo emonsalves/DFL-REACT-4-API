@@ -1,8 +1,8 @@
 import { useContext } from "react"
-import { DataContext } from "../context/DataContext"
-import Gender from "./Categories/Gender"
-import Species from "./Categories/Species"
-import Status from "./Categories/Status"
+import { DataContext } from "../../context/DataContext"
+import Gender from "../Categories/Gender"
+import Species from "../Categories/Species"
+import Status from "../Categories/Status"
 import styles from "./Filters.css"
 const Filters = () => {
   const { setPageNumber, setGender, setStatus, setSpecies } =
@@ -13,6 +13,7 @@ const Filters = () => {
     setGender("")
     setSpecies("")
     setStatus("")
+    window.location.reload(false);   
   }
 
   return (
