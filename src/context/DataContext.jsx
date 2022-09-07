@@ -2,13 +2,11 @@ import { createContext, useState, useEffect } from "react"
 export const DataContext = createContext()
 
 const DataProvider = ({ children }) => {
-
   let [pageNumber, setPageNumber] = useState(1)
   const [search, setSearch] = useState("")
   const [status, setStatus] = useState("")
   const [gender, setGender] = useState("")
   const [species, setSpecies] = useState("")
-
 
   const [info, setInfo] = useState("")
   const [data, setData] = useState([])
@@ -20,24 +18,25 @@ const DataProvider = ({ children }) => {
       .then((data) => setData(data))
       .catch((error) => console.log(error))
   }
+
   useEffect(() => {
     fetchData(apiUrl)
-  }, [apiUrl])
-
-  const fetchInfo = async () => {
-    await fetch(apiUrl)
-      .then((response) => response.json())
-      .then((data) => setInfo(data.info))
-      .catch((error) => console.log(error))
-  }
-
-  useEffect(() => {
-    fetchInfo(apiUrl)
+    setInfo(data.info)
   }, [apiUrl])
 
   return (
     <DataContext.Provider
-      value={{ data, pageNumber, setPageNumber, info, search, setSearch, setStatus, setGender, setSpecies }}
+      value={{
+        data,
+        pageNumber,
+        setPageNumber,
+        info,
+        search,
+        setSearch,
+        setStatus,
+        setGender,
+        setSpecies,
+      }}
     >
       {children}
     </DataContext.Provider>

@@ -19,7 +19,7 @@ const Filters = () => {
   return (
     <>
       <div className="w-full flex items-start mt-20">
-        <div className="w-48 px-5 py-8 mx-auto bg-black rounded-lg shadow-xl">
+        <div className="w-32 px-5 py-8 mx-auto bg-black rounded-lg shadow-xl">
           <h1 className="text-xl mb-1 text-center text-white">Filters</h1>
           <h1
             className="text-l mb-5 text-center text-red-500 underline"
