@@ -6,13 +6,14 @@ const Header = lazy(() => import("./layout/Header"))
 const Footer = lazy(() => import("./layout/Footer"))
 const Container = lazy(() => import("./layout/Container"))
 
+
 function App() {
   return (
     <DataProvider>
       <Suspense fallback={<Loading />}>
-        <Header />
+        {/* <Header /> */}
         <Container />
-        <Pagination/>
+        {/* <Pagination/> */}
         <Footer />
       </Suspense>
     </DataProvider>

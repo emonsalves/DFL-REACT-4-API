@@ -6,18 +6,10 @@ function Pagination() {
   const { pageNumber, setPageNumber, info } = useContext(DataContext)
 
   let prev = () => {
-    try {
-      pageNumber > 0 ? setPageNumber(pageNumber - 1) : null
-    } catch (error) {
-      setPageNumber(1)
-    }
+    pageNumber > 1 ? setPageNumber(pageNumber - 1) : null
   }
   let next = () => {
-    try {
-      pageNumber < info.pages ? setPageNumber(pageNumber + 1) : null
-    } catch (error) {
-      setPageNumber(2)
-    }
+    pageNumber < info.pages ? setPageNumber(pageNumber + 1) : null
   }
 
   return (

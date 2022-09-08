@@ -2,12 +2,13 @@ import { useContext } from "react"
 import { DataContext } from "../context/DataContext"
 
 function Cards() {
-  const { data } = useContext(DataContext)
+  const { results } = useContext(DataContext)
+  const { alive, dead, unknown } = ""
 
   return (
     <div className="flex flex-wrap col-span-6 justify-items-center justify-end bg-cover bg-fixed bg-center bg-no-repeat gap-6 pt-10 w-full md:justify-center">
-      {data.results ? (
-        data.results.map((slot) => (
+      {results ? (
+        results.map((slot) => (
           <div
             key={slot.id}
             className="w-56 rounded-lg shadow-md dark:bg-transparent hover:-translate-y-1 hover:scale-105 duration-300"

@@ -22,6 +22,7 @@ function FiltersBtn({ name, index, items }) {
           value="hosting-small"
           className="hidden peer"
           required=""
+          style={{display: "none"}}
         />
         <label
           htmlFor={`${name}-${index}`}

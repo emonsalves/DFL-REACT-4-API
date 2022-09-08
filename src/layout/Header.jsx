@@ -62,7 +62,7 @@ function Header() {
             </button>
           </div>
           <div className={btnClassHidden} id="navbar-sticky">
-            <ul className="flex flex-col p-4 mt-4 bg-gray-50 rounded-lg border border-green-400 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 dark:bg-transparent md:bg-transparent dark:border-green-400">
+            <ul className="flex flex-col p-4 mt-4 bg-gray-50 rounded-lg border border-green-400 md:flex-row md:space-x-8 md:mt-0 md:text-md md:font-medium md:border-0 dark:bg-transparent md:bg-transparent dark:border-green-400">
               <li>
                 <a
                   href="#"
