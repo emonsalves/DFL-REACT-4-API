@@ -3,8 +3,12 @@ import { DataContext } from "../context/DataContext"
 
 function Input() {
   
+<<<<<<< HEAD
   const {activaSearch, setPageNumber, search, setSearch } = useContext(DataContext)
 
+=======
+  const { setPageNumber, search, setSearch } = useContext(DataContext)
+>>>>>>> 3e794a49987c948f939a133abb16a74f713380df
 
   const keyPress = (e) => {
     setPageNumber(1)
@@ -12,7 +16,11 @@ function Input() {
   }
 
   return (
+<<<<<<< HEAD
     <fieldset className={activaSearch}>
+=======
+    <fieldset className="w-full dark:text-gray-100 ml-5">
+>>>>>>> 3e794a49987c948f939a133abb16a74f713380df
       <label htmlFor="Search" className="hidden">
         Buscar
       </label>

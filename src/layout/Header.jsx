@@ -5,6 +5,7 @@ import background from "../assets/wallpaper.jpg"
 import styles from "../components/animation.css"
 import Container from "./Container"
 import Episodes from "../pages/Episodes"
+<<<<<<< HEAD
 import { useContext } from "react"
 import { DataContext } from "../context/DataContext";
 
@@ -14,6 +15,10 @@ function Header() {
   const hiddenSerch = " hidden w-full dark:text-gray-100 ml-5"
   const showSerch = "w-full dark:text-gray-100 ml-5"
 
+=======
+
+function Header() {
+>>>>>>> 3e794a49987c948f939a133abb16a74f713380df
   const classHidden =
     "hidden justify-between items-center w-full md:flex md:w-auto md:z-1"
   const classShow =
@@ -26,6 +31,7 @@ function Header() {
       : setbtnClassHidden(classHidden)
   }
 
+<<<<<<< HEAD
   const searchInputShow = ()=> {
   setActivaSearch(showSerch)
   }
@@ -33,6 +39,8 @@ function Header() {
     setActivaSearch(hiddenSerch)
   }
 
+=======
+>>>>>>> 3e794a49987c948f939a133abb16a74f713380df
   return (
     <nav
       className="fixed w-full z-20 top-0 left-0 overflow-hidden bg-cover bg-no-repeat bg-fixed bg-center"
@@ -84,7 +92,10 @@ function Header() {
           <ul className="flex flex-col p-4 mt-4 bg-gray-50 rounded-lg border border-green-400 md:flex-row md:space-x-8 md:mt-0 md:text-md md:font-medium md:border-0 dark:bg-transparent md:bg-transparent dark:border-green-400">
             <li>
               <Link
+<<<<<<< HEAD
               onClick={searchInputShow}
+=======
+>>>>>>> 3e794a49987c948f939a133abb16a74f713380df
                 to="/"
                 className="da block py-2 pr-4 pl-3 text-green-400 rounded  hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-white dark:text-green-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-green-400"
                 aria-current="page"
@@ -94,7 +105,10 @@ function Header() {
             </li>
             <li>
               <Link
+<<<<<<< HEAD
               onClick={searchInpuHidden}
+=======
+>>>>>>> 3e794a49987c948f939a133abb16a74f713380df
                 to="/Locations"
                 className="da block py-2 pr-4 pl-3 text-green-400 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-white dark:text-green-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
               >
@@ -103,7 +117,10 @@ function Header() {
             </li>
             <li>
               <Link
+<<<<<<< HEAD
               onClick={searchInpuHidden}
+=======
+>>>>>>> 3e794a49987c948f939a133abb16a74f713380df
                 to="/Episodes"
                 className="da block py-2 pr-4 pl-3 text-green-400 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-white dark:text-green-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
               >

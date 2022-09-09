@@ -2,7 +2,11 @@ import { useContext, useState } from "react"
 import { DataContext } from "../context/DataContext"
 
 const FitroManual = () => {
+<<<<<<< HEAD
   const { results, info} = useContext(DataContext)
+=======
+  const { data, info} = useContext(DataContext)
+>>>>>>> 3e794a49987c948f939a133abb16a74f713380df
   
   console.log(info)
   const [inputCapture, setInputCapture] = useState("")
@@ -23,8 +27,13 @@ const FitroManual = () => {
   }
 
   // const listaX = !inputCapture
+<<<<<<< HEAD
   //   ? results
   //   : results.filter((item) =>
+=======
+  //   ? data.results
+  //   : data.results.filter((item) =>
+>>>>>>> 3e794a49987c948f939a133abb16a74f713380df
   //       item.name.toUpperCase().includes(inputCapture.toUpperCase())
   //     )
 

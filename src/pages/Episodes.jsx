@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useContext } from "react"
 import { DataContext } from "../context/DataContext"
 import background from "../assets/wallpaper.jpg"
@@ -58,6 +59,10 @@ function Episodes() {
       </div>
     </>
   )
+=======
+const Episodes = () => {
+  return <div>Episodes</div>
+>>>>>>> 3e794a49987c948f939a133abb16a74f713380df
 }
 
 export default Episodes
