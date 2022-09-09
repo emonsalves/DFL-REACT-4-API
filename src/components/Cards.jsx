@@ -6,7 +6,7 @@ function Cards() {
   const { alive, dead, unknown } = ""
 
   return (
-    <div className="flex flex-wrap col-span-6 justify-items-center justify-end bg-cover bg-fixed bg-center bg-no-repeat gap-6 pt-10 md:pt-36 w-full md:justify-center z-99">
+    <div className="flex flex-wrap col-span-6 justify-items-center justify-end bg-cover bg-fixed bg-center bg-no-repeat gap-6 w-full md:justify-center mt-44 sm:mt-36">
       {data ? (
         data.map((slot) => (
           <div
@@ -51,7 +51,16 @@ function Cards() {
           </div>
         ))
       ) : (
-        <h1>Sin coincidencias</h1>
+        <div class="background-img">
+        <div class="space"></div>
+          <div class="wrapper">
+            <div class="img-wrapper">
+              <span>44</span>
+            </div>
+            <p>The page you are trying to search has been <br/> moved to another universe.</p>
+            <button type="button">GET ME HOME</button>
+          </div>
+        </div>
         
       )}
     </div>
