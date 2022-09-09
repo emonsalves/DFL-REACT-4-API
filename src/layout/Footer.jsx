@@ -13,7 +13,7 @@ function Footer() {
               href="#"
               className="flex justify-center space-x-3 md:justify-start"
             >
-              <div className="flex items-center justify-center w-12 h-12 rounded-full dark:bg-gradient-to-r from-green-400 via-green-500 to-green-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-green-300 dark:focus:ring-green-800 shadow-lg shadow-green-500/50 dark:shadow-lg dark:shadow-green-800/80 hover:-translate-y-1 hover:scale-105 duration-300">
+              <div className="flex items-center justify-center w-12 h-12 rounded-full dark:bg-[#43d22b]  focus:ring-4 focus:outline-none focus:ring-green-300 dark:focus:ring-green-800 shadow-lg shadow-green-500/50 dark:shadow-lg dark:shadow-green-800/80 hover:-translate-y-1 hover:scale-105 duration-300">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 32 32"
@@ -162,7 +162,7 @@ function Footer() {
               rel="noopener noreferrer"
               href="#"
               title="Email"
-              className="flex items-center justify-center w-10 h-10 rounded-full dark:bg-gradient-to-r from-green-400 via-green-500 to-green-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-green-300 dark:focus:ring-green-800 shadow-lg shadow-green-500/50 dark:shadow-lg dark:shadow-green-800/80 dark:text-gray-900 hover:-translate-y-1 hover:scale-105 duration-300"
+              className="flex items-center justify-center w-10 h-10 rounded-full dark:bg-[#43d22b]  focus:ring-4 focus:outline-none focus:ring-green-300 dark:focus:ring-green-800 shadow-lg shadow-green-500/50 dark:shadow-lg dark:shadow-green-800/80 dark:text-gray-900 hover:-translate-y-1 hover:scale-105 duration-300"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -178,7 +178,7 @@ function Footer() {
               rel="noopener noreferrer"
               href="#"
               title="Twitter"
-              className="flex items-center justify-center w-10 h-10 rounded-full dark:bg-gradient-to-r from-green-400 via-green-500 to-green-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-green-300 dark:focus:ring-green-800 shadow-lg shadow-green-500/50 dark:shadow-lg dark:shadow-green-800/80 dark:text-gray-900 hover:-translate-y-1 hover:scale-105 duration-300"
+              className="flex items-center justify-center w-10 h-10 rounded-full dark:bg-[#43d22b] focus:ring-4 focus:outline-none focus:ring-green-300 dark:focus:ring-green-800 shadow-lg shadow-green-500/50 dark:shadow-lg dark:shadow-green-800/80 dark:text-gray-900 hover:-translate-y-1 hover:scale-105 duration-300"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -193,7 +193,7 @@ function Footer() {
               rel="noopener noreferrer"
               href="#"
               title="GitHub"
-              className="flex items-center justify-center w-10 h-10 rounded-full dark:bg-gradient-to-r from-green-400 via-green-500 to-green-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-green-300 dark:focus:ring-green-800 shadow-lg shadow-green-500/50 dark:shadow-lg dark:shadow-green-800/80 dark:text-gray-900 hover:-translate-y-1 hover:scale-105 duration-300"
+              className="flex items-center justify-center w-10 h-10 rounded-full dark:bg-[#43d22b] hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-green-300 dark:focus:ring-green-800 shadow-lg shadow-green-500/50 dark:shadow-lg dark:shadow-green-800/80 dark:text-gray-900 hover:-translate-y-1 hover:scale-105 duration-300"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"

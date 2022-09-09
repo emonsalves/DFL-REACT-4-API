@@ -26,7 +26,7 @@ function FiltersBtn({ name, index, items }) {
         />
         <label
           htmlFor={`${name}-${index}`}
-          className="flex justify-around items-center p-1 w-full text-gray-500 bg-white rounded-lg border border-gray-200 cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700"
+          className="flex justify-around items-center p-1 w-full text-gray-500 bg-white rounded-lg border border-gray-200 cursor-pointer dark:hover:text-[#43d22b] dark:border-gray-700 dark:peer-checked:text-[#43d22b] peer-checked:border-[#43d22b] peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700"
         >
           <div className="block">
             <div className="w-full text-xs font-semibold">{items}</div>

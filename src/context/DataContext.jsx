@@ -8,31 +8,42 @@ const DataProvider = ({ children }) => {
   const [gender, setGender] = useState("")
   const [species, setSpecies] = useState("")
   const [data, setData] = useState("")
+  const [info, setInfo] = useState("")
 
   const apiUrl = `https://rickandmortyapi.com/api/character?page=${pageNumber}&name=${search}&status=${status}&gender=${gender}&species=${species}`
 
-  let { info, results } = data
+  async function getFetch() {
+    let dataGet = await fetch(apiUrl)
+      .then((response) => response.json())
+      .catch((error) => error)
+    setData(dataGet)
+  }
 
   // IIFE ya que no alcanzaba a traer la data en el -> dataGet
   // IIFE (()=>{})() sintaxis
+
   useEffect(() => {
     ;(async function () {
       let dataGet = await fetch(apiUrl)
         .then((response) => response.json())
         .catch((error) => error)
-      setData(dataGet)
-      console.log("useEffect")
+      setInfo(dataGet.info)
+      setData(dataGet.results)
+      console.log("useEffect Fetch Initial")
     })()
   }, [apiUrl])
+
+  // useEffect(() => {
+  //   getFetch(), console.log("useEffect Fetch Url")
+  // }, [apiUrl])
 
   return (
     <DataContext.Provider
       value={{
         data,
-        results,
         pageNumber,
-        info,
         search,
+        info,
         setPageNumber,
         setSearch,
         setStatus,

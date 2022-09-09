@@ -2,13 +2,13 @@ import { useContext } from "react"
 import { DataContext } from "../context/DataContext"
 
 function Cards() {
-  const { results } = useContext(DataContext)
+  const { data } = useContext(DataContext)
   const { alive, dead, unknown } = ""
 
   return (
-    <div className="flex flex-wrap col-span-6 justify-items-center justify-end bg-cover bg-fixed bg-center bg-no-repeat gap-6 pt-10 w-full md:justify-center">
-      {results ? (
-        results.map((slot) => (
+    <div className="flex flex-wrap col-span-6 justify-items-center justify-end bg-cover bg-fixed bg-center bg-no-repeat gap-6 pt-10 md:pt-36 w-full md:justify-center z-99">
+      {data ? (
+        data.map((slot) => (
           <div
             key={slot.id}
             className="w-56 rounded-lg shadow-md dark:bg-transparent hover:-translate-y-1 hover:scale-105 duration-300"
@@ -52,6 +52,7 @@ function Cards() {
         ))
       ) : (
         <h1>Sin coincidencias</h1>
+        
       )}
     </div>
   )
