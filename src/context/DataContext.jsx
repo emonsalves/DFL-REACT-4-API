@@ -3,7 +3,7 @@ export const DataContext = createContext()
 
 const DataProvider = ({ children }) => {
   const [activaSearch, setActivaSearch] = useState(
-    "w-full dark:text-gray-100 ml-5"
+    "w-full dark:text-gray-100 sm:ml-32 "
   )
   const [pageNumber, setPageNumber] = useState(1)
   const [search, setSearch] = useState("")
@@ -30,7 +30,7 @@ const DataProvider = ({ children }) => {
   }, [apiUrl])
 
   // --------------------------------------------------------------------------------------------------------------------------------------------
-  // Episodes
+  // Episodes Data
   // --------------------------------------------------------------------------------------------------------------------------------------------
   const [episodes, setEpisodes] = useState(1)
   const [episodesData, setEpisodesData] = useState("")
@@ -72,7 +72,7 @@ const DataProvider = ({ children }) => {
   }, [])
 
   // --------------------------------------------------------------------------------------------------------------------------------------------
-  // Locations
+  // Locations data
   // --------------------------------------------------------------------------------------------------------------------------------------------
   const [locations, setLocations] = useState(1)
   const [locationsData, setLocationsData] = useState("")

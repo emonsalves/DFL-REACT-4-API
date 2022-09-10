@@ -30,12 +30,14 @@ function Header() {
   setActivaSearch(showSerch)
   setEpisodes(1)
   setLocations(1)
-  
+  btnHidden()  
   }
+  
   const searchInpuHidden=()=>{
     setActivaSearch(hiddenSerch)
     setEpisodes(1)
     setLocations(1)
+    btnHidden()
   }
 
   return (
@@ -47,19 +49,17 @@ function Header() {
         className="container flex flex-wrap justify-center 
         md:justify-around 2xl:min-w-full"
       >
-        <div className="flex justify-items-stretch">
+        <div className="flex items-center">
           <img
             src="https://i.postimg.cc/Wpqh08PC/logo.png"
             alt="logo rick and morty"
-            className="h-14 mr-10 sm:h-32"
+            className="h-32"
           />
           <div className="flex flex-col justify-center items-center">
             <h1 className="title text-lg">Ricky</h1>
             <h1 className="title text-lg">And</h1>
             <h1 className="title text-lg">Morty</h1>
-          </div>
-        </div>
-        <div className="flex justify-around items-center md:order-2 w-full md:w-auto">
+          </div>       
           <Input />
           <button
             onClick={btnHidden}
