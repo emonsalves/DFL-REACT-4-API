@@ -15,7 +15,7 @@ function Locations() {
 
   return (
     <>
-      <div className="bg-black text-white text-[18px] ms:text-[24px] mt-32 p-2 flex items-center justify-around">
+      <div className="bg-black text-white text-[18px] ms:text-[24px] mt-40 sm:mt-32 p-2 flex items-center justify-around">
         <div className="Flex justify-center items-center text-[18px] ms:text-[24px]">
           <h1>
             Location : 
