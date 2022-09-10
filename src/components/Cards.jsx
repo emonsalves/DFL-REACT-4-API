@@ -46,9 +46,7 @@ function Cards({ results }) {
             </div>
           </div>
         ))
-      ) : (
-        <h1 className="mt-36">NO ENCONTRADOO</h1>
-      )}
+      ) : null}
     </div>
   )
 }
