@@ -15,17 +15,17 @@ function Locations() {
 
   return (
     <>
-      <div className="bg-black text-white text-[1.25rem] mt-32 p-2 flex items-center justify-around">
-        <div className="Flex justify-center items-center">
+      <div className="bg-black text-white text-[18px] ms:text-[24px] mt-32 p-2 flex items-center justify-around">
+        <div className="Flex justify-center items-center text-[18px] ms:text-[24px]">
           <h1>
-            Name Location : 
-            <span className="text-[#43d22b] text-[1.5rem] pl-2">
+            Location : 
+            <span className="text-[#43d22b] text-[18px] ms:text-[24px] pl-2">
               {name === "" ? "Unknown" : name}
             </span>
           </h1>
           <h1>
-            Name Dimension : 
-            <span className="text-[#43d22b] text-[1.5rem] pl-2">
+            Dimension : 
+            <span className="text-[#43d22b] text-[18px] ms:text-[24px] pl-2">
               {dimension === "" ? "Umknown" : dimension}
             </span>
           </h1>
@@ -34,14 +34,14 @@ function Locations() {
           <h1 className="pr-4">Locations :</h1>
           <select
             onChange={pageChange}
-            className="w-36 text-center form-select appearance-none px-3 py-1.5 text-base font-normal text-white bg-black bg-clip-padding bg-no-repeat border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-[#43d22b] focus:border-[#43d22b] focus:outline-none"
+            className="w-22 text-center form-select appearance-none px-3 py-1.5 text-base font-normal text-white bg-black bg-clip-padding bg-no-repeat border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-[#43d22b] focus:border-[#43d22b] focus:outline-none"
             aria-label="Default select example"
           >
             {/* [...Array(Variable).keys()] transforma a array y luego un key que nos devuelve el correlativo en este caso */}
             {[...Array(locationsTotal).keys()].map((x) => {
               return (
                 <option key={x + 1} value={x + 1}>
-                  Location N°{x + 1}
+                  {x + 1}
                 </option>
               )
             })}
