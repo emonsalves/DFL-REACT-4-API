@@ -10,7 +10,7 @@ const Container = () => {
   return (
     <>
       <div
-        className="bg-cover bg-fixed bg-center bg-no-repeat mt-40 p-1 flex justify-cente sm:mt-32"
+        className="bg-cover bg-fixed bg-center bg-no-repeat mt-28 pt-3 p-1 flex justify-cente sm:mt-32"
         style={{ backgroundImage: `url(${background}) ` }}
       >
         <h1></h1>

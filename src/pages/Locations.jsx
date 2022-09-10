@@ -15,7 +15,7 @@ function Locations() {
 
   return (
     <>
-      <div className="bg-black text-white text-[18px] ms:text-[24px] mt-40 sm:mt-32 p-2 flex items-center justify-around">
+      <div className="bg-black text-white text-[18px] sm:text-[24px] mt-[98px] sm:mt-32 p-2 pt-10 sm:pt-0 flex items-center justify-around">
         <div className="Flex justify-center items-center text-[18px] ms:text-[24px]">
           <h1>
             Location : 
@@ -34,7 +34,7 @@ function Locations() {
           <h1 className="pr-4">Locations :</h1>
           <select
             onChange={pageChange}
-            className="w-22 text-center form-select appearance-none px-3 py-1.5 text-base font-normal text-white bg-black bg-clip-padding bg-no-repeat border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-[#43d22b] focus:border-[#43d22b] focus:outline-none"
+            className="w-22 text-center form-select appearance-none px-3 py-1.5 text-base font-normal text-white bg-black bg-clip-padding bg-no-repeat border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-[#43d22b] focus:border-[#43d22b] focus:outline-none overflow-auto"
             aria-label="Default select example"
           >
             {/* [...Array(Variable).keys()] transforma a array y luego un key que nos devuelve el correlativo en este caso */}

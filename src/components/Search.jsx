@@ -1,7 +1,7 @@
 import { useContext } from "react"
 import { DataContext } from "../context/DataContext"
 
-function Input() {
+function Search() {
   
   const {activaSearch, setPageNumber, search, setSearch } = useContext(DataContext)
 
@@ -12,7 +12,7 @@ function Input() {
   }
 
   return (
-    <fieldset className={activaSearch}>
+    <fieldset className={activaSearch} >
       <label htmlFor="Search" className="hidden">
         Buscar
       </label>
@@ -38,11 +38,11 @@ function Input() {
           type="search"
           name="Search"
           placeholder="Buscar..."
-          className="w-40 py-2 pl-10 text-sm rounded-md focus:outline-none border border-green-400 dark:bg-black dark:text-gray-100 focus:dark:bg-gray-900 focus:dark:border-violet-400"
+          className="w-28 sm:w-44 py-2 pl-10 text-sm rounded-md focus:outline-none border border-green-400 dark:bg-black dark:text-gray-100 focus:dark:bg-gray-900 focus:dark:border-violet-400"
         />
       </div>
     </fieldset>
   )
 }
 
-export default Input
+export default Search
