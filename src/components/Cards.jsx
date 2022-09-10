@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 function Cards({ results }) {
   const { alive, dead, unknown } = ""
 
@@ -6,19 +5,6 @@ function Cards({ results }) {
     <div className="flex flex-wrap col-span-6 justify-items-center justify-end bg-cover bg-fixed bg-center bg-no-repeat gap-6 w-full md:justify-center pt-2">
       {results ? (
         results.map((slot) => (
-=======
-import { useContext } from "react"
-import { DataContext } from "../context/DataContext"
-
-function Cards() {
-  const { data } = useContext(DataContext)
-  const { alive, dead, unknown } = ""
-
-  return (
-    <div className="flex flex-wrap col-span-6 justify-items-center justify-end bg-cover bg-fixed bg-center bg-no-repeat gap-6 w-full md:justify-center mt-44 sm:mt-36">
-      {data ? (
-        data.map((slot) => (
->>>>>>> 3e794a49987c948f939a133abb16a74f713380df
           <div
             key={slot.id}
             className="w-56 rounded-lg shadow-md dark:bg-transparent hover:-translate-y-1 hover:scale-105 duration-300"
@@ -61,21 +47,7 @@ function Cards() {
           </div>
         ))
       ) : (
-<<<<<<< HEAD
         <h1 className="mt-36">NO ENCONTRADOO</h1>
-=======
-        <div class="background-img">
-        <div class="space"></div>
-          <div class="wrapper">
-            <div class="img-wrapper">
-              <span>44</span>
-            </div>
-            <p>The page you are trying to search has been <br/> moved to another universe.</p>
-            <button type="button">GET ME HOME</button>
-          </div>
-        </div>
-        
->>>>>>> 3e794a49987c948f939a133abb16a74f713380df
       )}
     </div>
   )

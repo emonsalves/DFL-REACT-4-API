@@ -19,29 +19,29 @@ function Episodes() {
         <div className="Flex justify-center items-center">
           <h1>
             Name Episode :
-            <span className="text-[#43d22b] text-[1.5rem]">
+            <span className="text-[#43d22b] text-[1.5rem] pl-2">
               {name === "" ? "Unknown" : name}
             </span>
           </h1>
           <h1>
             Air date :
-            <span className="text-[#43d22b] text-[1.5rem]">
+            <span className="text-[#43d22b] text-[1.5rem] pl-2">
               {air_date === "" ? "Umknown" : air_date}
             </span>
           </h1>
         </div>
-        <div className="flex justify-center items-center">
-          <h1 className="pr-4">Episodio N°</h1>
+        <div className="flex justify-center items-center pl-2">
+          <h1 className="pr-4">Episodes</h1>
           <select
             onChange={pageChange}
-            className="w-16 text-center form-select appearance-none px-3 py-1.5 text-base font-normal text-white bg-black bg-clip-padding bg-no-repeat border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-[#43d22b] focus:border-[#43d22b] focus:outline-none"
+            className="w-36 text-center form-select appearance-none px-3 py-1.5 text-base font-normal text-white bg-black bg-clip-padding bg-no-repeat border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-[#43d22b] focus:border-[#43d22b] focus:outline-none"
             aria-label="Default select example"
           >
             {/* [...Array(Variable).keys()] transforma a array segun el valor de la variable */}
             {[...Array(episodesTotal).keys()].map((x) => {
               return (
                 <option key={x + 1} value={x + 1}>
-                  {x + 1}
+                  Episode N°{x + 1}
                 </option>
               )
             })}

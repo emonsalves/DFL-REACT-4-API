@@ -2,7 +2,9 @@ import { createContext, useState, useEffect } from "react"
 export const DataContext = createContext()
 
 const DataProvider = ({ children }) => {
-  const [activaSearch, setActivaSearch] = useState("w-full dark:text-gray-100 ml-5")
+  const [activaSearch, setActivaSearch] = useState(
+    "w-full dark:text-gray-100 ml-5"
+  )
   const [pageNumber, setPageNumber] = useState(1)
   const [search, setSearch] = useState("")
   const [status, setStatus] = useState("")
@@ -69,6 +71,48 @@ const DataProvider = ({ children }) => {
     })()
   }, [])
 
+  // --------------------------------------------------------------------------------------------------------------------------------------------
+  // Locations
+  // --------------------------------------------------------------------------------------------------------------------------------------------
+  const [locations, setLocations] = useState(1)
+  const [locationsData, setLocationsData] = useState("")
+  const [locationsResults, setLocationsResults] = useState("")
+  const [locationsTotal, setLocationsTotal] = useState("")
+
+  const LocationsUrl = `https://rickandmortyapi.com/api/location/${locations}`
+  const LocationsUrlCount = "https://rickandmortyapi.com/api/location/"
+
+  useEffect(() => {
+    ;(async function () {
+      let dataLocation = await fetch(LocationsUrl)
+        .then((response) => response.json())
+        .catch((error) => error)
+      console.log("useEffect Fetch Locations")
+      setLocationsData(dataLocation)
+
+      // dataEpisode tiene un campo Characters poblado con url, por lo que hacemos
+      // una nueva llamada pero grupal Promise.all con un map que le recorre
+      // recordar el return
+
+      let dataLocations = await Promise.all(
+        dataLocation.residents.map((link) => {
+          return fetch(link).then((response) => response.json())
+        })
+      ) /* recordar los parentesis y el set afuera */
+      setLocationsResults(dataLocations)
+    })()
+  }, [LocationsUrl])
+
+  useEffect(() => {
+    ;(async function () {
+      let dataL = await fetch(LocationsUrlCount)
+        .then((response) => response.json())
+        .catch((error) => error)
+      setLocationsTotal(dataL.info.count)
+      console.log("useEffect Fetch Number Locations")
+    })()
+  }, [])
+
   return (
     <DataContext.Provider
       value={{
@@ -87,6 +131,10 @@ const DataProvider = ({ children }) => {
         setEpisodes,
         activaSearch,
         setActivaSearch,
+        locationsResults,
+        locationsData,
+        locationsTotal,
+        setLocations,
       }}
     >
       {children}
