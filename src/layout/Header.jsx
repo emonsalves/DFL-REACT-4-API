@@ -1,10 +1,8 @@
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom"
+import { Link } from "react-router-dom"
 import { useState } from "react"
 import Input from "../components/Search"
 import background from "../assets/wallpaper.jpg"
 import styles from "../components/animation.css"
-import Container from "./Container"
-import Episodes from "../pages/Episodes"
 import { useContext } from "react"
 import { DataContext } from "../context/DataContext";
 

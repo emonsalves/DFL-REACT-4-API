@@ -2,8 +2,12 @@ import { createContext, useState, useEffect } from "react"
 export const DataContext = createContext()
 
 const DataProvider = ({ children }) => {
+  // --------------------------------------------------------------------------------------------------------------------------------------------
+  // PROFE SI PUEDE DEJARME FEEDBACKS SE LE AGRADECERIA
+  // --------------------------------------------------------------------------------------------------------------------------------------------
+
   const [activaSearch, setActivaSearch] = useState(
-    "w-full dark:text-gray-100 sm:ml-32 "
+    "w-full dark:text-gray-100 sm:ml-32"
   )
   const [pageNumber, setPageNumber] = useState(1)
   const [search, setSearch] = useState("")

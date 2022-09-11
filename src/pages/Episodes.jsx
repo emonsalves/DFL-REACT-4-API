@@ -2,7 +2,6 @@ import { useContext } from "react"
 import { DataContext } from "../context/DataContext"
 import background from "../assets/wallpaper.jpg"
 import Cards from "../components/Cards"
-import Filters from "../components/Filters/Filters"
 
 function Episodes() {
   const { episodesData, episodesResults, episodesTotal, setEpisodes } =
